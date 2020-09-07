@@ -1,0 +1,2 @@
+[global.databases]
+babestu = { url = "data/db.sqlite" }

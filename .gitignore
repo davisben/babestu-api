@@ -1,1 +1,8 @@
+# Environemnt variables
+.env
+
+# Data directory
+/data
+
+# Build files
 /target
