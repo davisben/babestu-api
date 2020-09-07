@@ -1,0 +1,15 @@
+[package]
+name = "babestu-api"
+version = "0.1.0"
+authors = ["Ben Davis <ben@davisben.com>"]
+edition = "2018"
+description = "API for SSH key management"
+repository = "https://github.com/davisben/babestu-api"
+license = "MIT"
+publish = false
+
+[dependencies]
+rocket = { version = "0.5.0-dev", default-features = false }
+
+[patch.crates-io]
+rocket = { git = 'https://github.com/SergioBenitez/Rocket', branch = 'master' }
