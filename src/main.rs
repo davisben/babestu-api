@@ -1,19 +1,6 @@
-#[macro_use] extern crate rocket;
-#[macro_use] extern crate rocket_contrib;
-
-use rocket_contrib::databases::rusqlite;
-
-#[database("babestu")]
-struct Connection(rusqlite::Connection);
-
-#[get("/")]
-fn index() -> &'static str {
-    "Welcome to babestu!"
-}
+use babestu_api;
 
 #[rocket::launch]
 fn rocket() -> rocket::Rocket {
-    rocket::ignite()
-        .attach(Connection::fairing())
-        .mount("/", routes![index])
+    babestu_api::rocket()
 }

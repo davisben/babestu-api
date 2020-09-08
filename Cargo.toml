@@ -1,5 +1,5 @@
 [package]
-name = "babestu-api"
+name = "babestu_api"
 version = "0.1.0"
 authors = ["Ben Davis <ben@davisben.com>"]
 edition = "2018"
