@@ -13,7 +13,7 @@ chrono = { version = "0.4.15", features = ["serde"] }
 diesel = { version = "1.4.5", features = ["sqlite", "chrono"] }
 rocket = { version = "0.5.0-dev", default-features = false }
 rocket_contrib = { version = "0.5.0-dev", features = ["diesel_sqlite_pool", "json"], default-features = false }
-serde = { version = "1.0" }
+serde = { version = "1.0", features = ["derive"] }
 
 [patch.crates-io]
 rocket = { git = 'https://github.com/SergioBenitez/Rocket', branch = 'master' }

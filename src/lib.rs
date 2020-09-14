@@ -8,12 +8,14 @@ use diesel::sqlite::SqliteConnection;
 #[database("babestu")]
 pub struct DbConn(SqliteConnection);
 
+mod error;
 mod schema;
-mod models;
-mod routes;
+mod user;
 
 pub fn rocket() -> Rocket {
     rocket::ignite()
-        .mount("/user", routes::user::routes())
         .attach(DbConn::fairing())
+        .mount("/user", user::routes::routes())
+        .register(error::catchers())
+
 }
