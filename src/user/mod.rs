@@ -28,7 +28,7 @@ pub fn update(id: i32, user: UpdatedUser, conn: DbConn) -> QueryResult<User> {
         .set(user)
         .execute(&*conn)?;
 
-    users::table.order(users::id.desc()).first(&*conn)
+    users::table.find(id).get_result(&*conn)
 }
 
 pub fn delete(id: i32, conn: DbConn) -> QueryResult<usize> {
